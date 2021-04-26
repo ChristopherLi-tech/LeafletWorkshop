@@ -104,35 +104,27 @@
     // ----------- BEGIN SECTION (Markers, circles, polygons, & popups) ------------- 
     // Enable the code below to show additional elements that can be added to your map. 
     
-    
-
-	L.marker([52.50, -113.22]).addTo(mymap)
+	L.marker([50.95, -114.22]).addTo(mymap)
 		.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
-
 	
     
-        L.circle([54.0100, -113.0100], 1200, {
+    L.circle([51.0100, -114.0100], 1200, {
 		color: 'red',
 		fillColor: '#f03',
 		fillOpacity: 0.5
 	}).addTo(mymap).bindPopup("I am a circle.");
-
 	L.polygon([
-		[56.1800, -118.20],
-		[58.1200, -117.20],
-		[59.1400, -119.25]
+		[51.1000, -114.20],
+		[51.1600, -114.20],
+		[51.1400, -114.25]
 	]).addTo(mymap).bindPopup("I am a polygon.");
-
-
 	var popup = L.popup();
-
 	function onMapClick(e) {
 		popup
 			.setLatLng(e.latlng)
 			.setContent("You clicked the map at " + e.latlng.toString())
 			.openOn(mymap);
 	}
-
 	mymap.on('click', onMapClick);
     
     
